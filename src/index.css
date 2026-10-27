@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+body {
+  font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', 'Noto Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #000000;
+  color: #F8FAFC;
+  overflow-x: hidden;
+}
+
+::selection,
+.selection-red::selection {
+  background: #ef233c;
+  color: white;
+}
+
+/* Red Noir Starfield & Cosmos Keyframes */
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
+
+.animate-stars-fast {
+  animation: animStar 50s linear infinite;
+}
+
+.animate-stars-slow {
+  animation: animStar 80s linear infinite;
+}
+
+.stars-1 {
+  box-shadow: 234px 124px #fff, 654px 345px #fff, 876px 12px #fff, 1200px 800px #fff, 400px 1500px #fff, 1800px 200px #fff, 100px 1000px #fff, 900px 1900px #fff, 500px 600px #fff, 1400px 100px #fff, 300px 400px #fff, 1600px 1200px #fff;
+}
+
+.stars-2 {
+  box-shadow: 123px 456px #fff, 789px 234px #fff, 456px 890px #fff, 1100px 300px #fff, 200px 1200px #fff, 1500px 500px #fff, 600px 1700px #fff, 1300px 900px #fff;
+}
+
+.red-noir-grid {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+  mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+}
+
+.gradient-blur {
+  position: fixed;
+  z-index: 40;
+  inset: 0 0 auto 0;
+  height: 120px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent);
+  mask-image: linear-gradient(to bottom, black, transparent);
+}
+
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #080C15;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+.font-display {
+  font-family: 'Space Grotesk', 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', 'Noto Sans Devanagari', 'Noto Sans', ui-monospace, monospace;
+}
+
+.bg-glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.radial-cinematic-overlay {
+  background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.45) 100%);
+}
+
+.linear-cinematic-overlay {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%, transparent 40%, rgba(0,0,0,0.9) 100%);
+}
+
+@keyframes cinematicReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-cinematic-reveal {
+  animation: cinematicReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.magnetic-btn {
+  transition: transform 0.3s cubic-bezier(0.33, 1, 0.68, 1), box-shadow 0.3s ease;
+}
+
+.magnetic-btn:hover {
+  transform: scale(1.05);
+}

@@ -1,0 +1,6 @@
+{
+  "name": "IMovies - Next-Gen Cinema & Ticket Booking",
+  "description": "Book movie tickets, select tiered seats with real-time hold timers, add gourmet snacks, and generate digital perforated entry passes inspired by BookMyShow and District.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
